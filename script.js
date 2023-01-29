@@ -1,18 +1,16 @@
 const background = document.getElementById("main")
 
-function Color(r, g, b, a) {
+class Color {
+  constructor(r, g, b, a) {
     this.r = r
     this.g = g
     this.b = b
     this.a = a
+  }
     
 }
 
-Color.prototype.rgb = function() {   
 
-return "rgb(" + this.r + "," + this.g + "," + this.b + ")";
-    
-}
 
 Color.prototype.hex = function(r, g, b) {
 
@@ -30,6 +28,12 @@ Color.prototype.hex = function(r, g, b) {
         return "#" + this.r + this.g + this.b;
 }
 
+Color.prototype.rgb = function() {   
+
+  return "rgb(" + this.r + "," + this.g + "," + this.b + ")";
+      
+  }
+
 Color.prototype.rgba = function(r,g,b,a) {
 
     return "rgba(" + this.r + "," + this.g + "," + this.b + "," + this.a +")";
@@ -39,12 +43,12 @@ Color.prototype.rgba = function(r,g,b,a) {
 
 
 
-const color1 = new Color(150, 23, 235);
-const color2 = new Color(150, 26, 68, 0.9);
+const color1 = new Color(110, 50, 99);
+const color2 = new Color(150, 26, 189, 0.9);
 
 console.log(color1.rgb());
 console.log(color1.hex());
 console.log(color2.rgba());
 
-background.style.backgroundColor = color1.rgb();
+background.style.backgroundColor = color2.rgba();
 

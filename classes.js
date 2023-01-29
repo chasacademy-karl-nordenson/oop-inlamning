@@ -34,7 +34,7 @@ export class Deck {
             this.cards[i] = this.cards[j];
             this.cards[j] = x;
         }
-  /*       console.log(deck) */
+        /* console.log(this.cards) */
     
 
     }
@@ -63,8 +63,9 @@ export class Player {
 
     }
 
-    assignCardsToPlayer(num) {
-        this.hand.push(...cardsToGet)
+    assignCardsToPlayer(newCards) {
+        this.hand.push(...newCards)
+        /* console.log(newCards) */
 
         
     }
@@ -115,4 +116,3 @@ export class Pile {
 }
 
 }
-
